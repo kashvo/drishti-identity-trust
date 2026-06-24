@@ -8,7 +8,7 @@
 
 Banks verify identity once — at login — and then walk away. But fraud doesn't happen at the door. It happens inside.
 
-Current rule-based systems are rigid. They cannot reason about combinations of signals they haven't seen before. They block genuine users with false positives. They miss real threats with false negatives. And in India, where UPI processes over 8,000 transactions every second — each one instant and irreversible — there is no room for error.
+Current rule-based systems are rigid. They cannot reason about combinations of signals they haven't seen before. They block genuine users with false positives. They miss real threats with false negatives. And in India, where UPI processes over 8,000 transactions every second - Each one instant, each one final — the system must be right before the money moves, not after.
 
 Bank of Baroda serves an extraordinarily diverse customer base: a farmer in rural Gujarat making his first digital payment, and a startup founder in Mumbai making his fifteenth transfer of the day. Their normal looks nothing alike. A system that treats them the same will fail both.
 
