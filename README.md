@@ -34,6 +34,10 @@ payment, and a startup founder in Mumbai making his
 fifteenth transfer of the day. Their normal looks nothing 
 alike. A system that treats them the same will fail both.
 
+In FY2024-25, over 6.32 lakh UPI fraud cases were reported 
+in India, with losses exceeding ₹485 crore. Yet most banking 
+systems still verify identity only once — at the door.
+
 ---
 
 ## The Solution
@@ -57,7 +61,33 @@ once, in real time. That combination is what Drishti watches.
 
 ---
 
+## Why Drishti is Different
+
+Most fraud detection systems react. They wait for a rule 
+to break, then flag it. Drishti thinks. It builds a living 
+picture of each user over time and watches for anything 
+that breaks that picture — across every action, every 
+session, every channel. It is the difference between a 
+security camera that records and a security guard that 
+understands.
+
+| What exists today | Drishti |
+|---|---|
+| Checks identity at login only | Monitors the entire session |
+| Rule-based, rigid | Reasons contextually |
+| One-size-fits-all | Personalised per user |
+| Black box score | Full explanation chain |
+| Reacts after fraud | Investigates before deciding |
+| Single signal trust | Multi-signal cross validation |
+| Vulnerable to deepfakes | Spectrogram and liveness detection |
+
+---
+
 ## How It Works
+
+Here is what happens from the moment a user opens their 
+banking app to the moment a decision is made — in under 
+50 milliseconds.
 
 ```
 User Action
