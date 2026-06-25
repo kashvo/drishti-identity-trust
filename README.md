@@ -110,6 +110,13 @@ session behaviour simultaneously. Faking one signal
 is easy. Faking all of them perfectly, in real time, 
 is not.
 
+For voice verification, Drishti runs spectrogram 
+analysis as a tool call — detecting synthetic artifacts 
+in pitch and frequency that human ears miss but machines 
+can spot. For video KYC, unpredictable real-time liveness 
+challenges are triggered — blink, turn, speak — that 
+current deepfake tools cannot respond to in real time.
+
 **Explainable Decisions**
 Every decision comes with a full reasoning chain. 
 Not just a risk score — a clear explanation of why, 
