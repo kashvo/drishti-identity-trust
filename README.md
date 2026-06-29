@@ -5,9 +5,10 @@
 
 [![Status](https://img.shields.io/badge/Status-Active_Development-brightgreen?style=flat-square)]()
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
-[![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://streamlit.io)
+[![Dashboard](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://streamlit.io)
 [![AI](https://img.shields.io/badge/AI-Agentic_Chain--of--Thought-7F77DD?style=flat-square)]()
 [![Privacy](https://img.shields.io/badge/Privacy-DPDP_Act_Compliant-0F6E56?style=flat-square)]()
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)]()
 [![Hackathon](https://img.shields.io/badge/PSB_Hackathon-2026-orange?style=flat-square)](https://bankofbaroda.in)
 
 **A privacy-first, Agentic AI-powered Identity Trust Framework for continuous digital banking security.**
@@ -15,7 +16,7 @@
 *PSB Hackathon Series 2026 · Bank of Baroda × IIT Gandhinagar*
 *Domain: Cybersecurity & Fraud — Identity Trust, Protection & Safety*
 
-[Problem](#the-problem) · [Solution](#the-solution) · [Architecture](#architecture) · [How It Works](#how-it-works) · [Features](#key-features) · [Tech Stack](#technology-stack) · [Team](#team-drishti)
+[Problem](#the-problem) · [Real-World Context](#real-world-context) · [Solution](#the-solution) · [Architecture](#architecture) · [How It Works](#how-it-works) · [Features](#key-features) · [Tech Stack](#technology-stack) · [Research](#research-foundation) · [Team](#team-drishti)
 
 </div>
 
@@ -25,7 +26,7 @@
 
 Banks verify identity once — at login — and then walk away. But fraud doesn't happen at the door. It happens inside.
 
-Current rule-based systems are rigid. They cannot reason about combinations of risk signals they haven't seen before. They block genuine users with false positives and miss real threats with false negatives. In India, where UPI processes over **8,000 transactions every second** — each one instant and irreversible — the system must be right before the money moves, not after.
+Current rule-based systems are rigid. They cannot reason about combinations of risk signals they have not seen before. They block genuine users with false positives and miss real threats with false negatives. In India, where UPI processes over **8,000 transactions every second** — each one instant and irreversible — the system must be right before the money moves, not after.
 
 Today's threats go further. Generative AI can clone a customer's voice in seconds. Deepfake tools replicate faces convincingly enough to fool verification systems. Fraudsters no longer steal credentials. They manufacture identities. Systems that rely on a single signal — a voice match, a face scan, a known device — are no longer sufficient.
 
@@ -35,19 +36,19 @@ Bank of Baroda serves an extraordinarily diverse customer base: a farmer in rura
 
 ---
 
-## Real-World Context — Why This Matters for Bank of Baroda
+## Real-World Context
 
-Drishti is not built for a hypothetical problem. Bank of Baroda has faced real, documented fraud incidents that Drishti is specifically designed to prevent.
+Drishti is not built for a hypothetical problem. Bank of Baroda has faced real, documented fraud incidents — each one a failure that continuous agentic identity monitoring could have prevented.
 
 | Incident | What Happened | How Drishti Prevents It |
 |---|---|---|
-| bob World App Crisis | Frontline staff linked unauthorized mobile numbers to customer accounts, enabling suspicious transactions | Agent flags account detail changes as high-risk events and triggers hard verification before any change is saved |
-| Digital Arrest Scams | Fraudsters impersonated authorities and coerced customers into transferring funds | Unusual navigation patterns and large transfers to unknown beneficiaries trigger agent intervention mid-session |
-| RBI Currency Chest Fraud | A BoB employee stole ₹8.7 crore over time from an RBI currency chest | Privileged access monitoring detects employees accessing accounts outside their normal role and transaction patterns |
-| Gold Loan Employee Fraud | A branch employee stole pledged gold ornaments to fund online gambling | Insider behaviour monitoring flags access to assets outside an employee's usual scope and escalates for review |
-| Corporate Bill Discounting Fraud | Falsified documents used to divert large bank funds through forex and bill discounting schemes | Agent cross-validates transaction signals against user history and flags document-based high-value anomalies |
+| **bob World App Crisis (2023)** | Bank agents linked unauthorized mobile numbers to over 4.22 lakh customer accounts to boost app registrations. RBI banned new onboarding. ₹22 lakh stolen from 362 customers. | Agent flags account detail changes as high-risk events and triggers hard verification before any mobile number change is saved |
+| **RBI Currency Chest Theft (2026)** | A joint custodian at BoB's Ahmedabad branch manipulated e-Kuber portal records to steal ₹8.70 crore over four months — undetected until a routine RBI inspection | Continuous privileged access monitoring detects unusual portal activity patterns. Four months of anomalous behaviour would have been flagged on day one |
+| **Gold Loan Fraud (2025)** | Accused conspired with a bank valuer to approve gold loans against fake ornaments using forged valuation certificates across multiple accounts | Agent cross-validates transaction patterns and flags collusion signals — multiple accounts, same valuer, same branch, same time window |
+| **₹9 Crore Loan Fraud (2026)** | A 53-person network including bank staff used fake identities and forged documents across multiple districts to secure and withdraw loans | KYC signal cross-validation and identity trust scoring detects synthetic identity patterns and flags document-based anomalies in real time |
+| **Digital Arrest Scams** | Fraudsters impersonating authorities coerce customers into transferring large sums under psychological pressure | Behavioural biometrics detect distressed navigation patterns — rushed clicks, unusual transfer amounts, unknown beneficiaries — and trigger intervention mid-session |
 
-> These are not hypothetical threats. They are failures that a continuous, agentic identity trust system could have detected — and stopped.
+> *These are not edge cases. They are systemic failures — of monitoring, of verification, and of trust. Drishti addresses each one at the architectural level.*
 
 ---
 
@@ -55,7 +56,7 @@ Drishti is not built for a hypothetical problem. Bank of Baroda has faced real, 
 
 **Drishti** is an Agentic AI-powered Identity Trust Framework that continuously monitors user sessions across all digital banking channels — not just at login, but across every action, every screen, every transaction.
 
-It maintains a quiet memory for every user — not their personal details, just their patterns. Their habits. Their normal. When something breaks that picture, Drishti doesn't immediately block. It **investigates first**, reasons through the evidence using chain-of-thought tool calling, and then decides — the way a human fraud analyst would, at machine speed.
+It maintains a quiet memory for every user — not their personal details, just their patterns. Their habits. Their normal. When something breaks that picture, Drishti does not immediately block. It **investigates first**, reasons through the evidence using chain-of-thought tool calling, and then decides — the way a human fraud analyst would, at machine speed.
 
 No single signal makes a decision. A deepfake can clone a voice. It cannot simultaneously replicate how someone types, how they navigate, what they usually transfer, which device they always use, and where they always transact from — all at once, in real time. **That combination is what Drishti watches.**
 
@@ -74,7 +75,7 @@ No single signal makes a decision. A deepfake can clone a voice. It cannot simul
 | Reacts after fraud occurs | Investigates before deciding |
 | Batch processing after transaction | Stream processing during authorization |
 | Trusts a single biometric signal | Cross-validates across all signals simultaneously |
-| Vulnerable to deepfakes and voice clones | Spectrogram analysis + real-time liveness detection |
+| Vulnerable to deepfakes and voice clones | Spectrogram analysis and real-time liveness detection |
 | Cannot explain its decisions | Full audit trail for RBI compliance |
 
 ---
@@ -174,6 +175,7 @@ AUDIT LOG CREATED
 ```
 
 **Example Agent Reasoning — Live Session:**
+
 ```
 Event:    ₹1,80,000 transfer attempted at 3:14 AM
 
@@ -209,7 +211,7 @@ Reason:   "Transfer 3.6x user maximum + unrecognized device
 ## Key Features
 
 **🔍 Continuous Session Monitoring**
-Identity verified throughout the entire session — not just at login. Aligned with the IMF's 2026 directive that banking must shift from single authentication to continuous identity verification.
+Identity verified throughout the entire session — not just at login. Every action is watched, every shift in behaviour is noticed. Aligned with the IMF's 2026 directive that banking must shift from single authentication to continuous identity verification.
 
 **🧠 Per-User Memory Profiles**
 Lightweight JSON profiles capture each user's behavioural baseline. A farmer in Gujarat and a professional in Mumbai are understood differently. The system learns — and never stops learning.
@@ -242,7 +244,7 @@ Every session updates the user's memory profile. The system gets smarter, more a
 | New Device Risk | Device fingerprinting flags unknown devices at the first signal |
 | Behavioural Anomalies | Per-user baseline catches deviations invisible to any rule engine |
 | Session Hijacking | Mid-session behaviour shifts trigger immediate agent re-evaluation |
-| Deepfake and Voice Clones | Spectrogram analysis + real-time liveness detection |
+| Deepfake and Voice Clones | Spectrogram analysis and real-time liveness detection |
 | Privileged Access Misuse | Insider access patterns monitored identically to customer sessions |
 
 ---
@@ -267,7 +269,7 @@ Every session updates the user's memory profile. The system gets smarter, more a
 ## Project Structure
 
 ```
-Drishti/
+drishti-identity-trust/
 ├── agent/
 │   ├── brain.py              # Core agentic reasoning loop
 │   ├── tools.py              # Tool definitions and handlers
@@ -297,8 +299,8 @@ Drishti/
 
 ```bash
 # Clone the repository
-git clone https://github.com/kashvo/Drishti.git
-cd Drishti
+git clone https://github.com/kashvo/drishti-identity-trust.git
+cd drishti-identity-trust
 
 # Install dependencies
 pip install -r requirements.txt
@@ -329,11 +331,12 @@ Drishti is grounded in current peer-reviewed research and industry intelligence.
 
 | Source | Relevance |
 |---|---|
-| IMF Digital Finance Notes (2026) | Validates shift from single auth to continuous identity verification |
-| World Journal of Advanced Research (2025) | Validates per-user behavioural profiling with stream processing for real-time fraud decisions |
-| Yao et al. (2023) — ReAct, arXiv:2210.03629 | Foundational framework for agentic chain-of-thought reasoning |
+| IMF Digital Finance Notes (2026) | Validates shift from single authentication to continuous identity verification across banking channels |
+| World Journal of Advanced Research (2025) | Validates per-user behavioural profiling with stream processing for real-time fraud decisions during payment authorization |
+| Yao et al. (2023) — ReAct, arXiv:2210.03629 | Foundational framework for agentic chain-of-thought reasoning and tool use |
 | NVIDIA AI Blueprint — Financial Fraud Detection (2025) | Confirms agentic multi-signal approach reduces false positives significantly |
-| Accenture Banking Trends (2026) | Confirms agent identity frameworks as a critical banking priority |
+| Accenture Banking Trends (2026) | Confirms agent identity frameworks as a critical banking priority for 2026 |
+| Al Jazeera — bob World Investigation (2023) | Documents real-world insider fraud at Bank of Baroda that Drishti directly addresses |
 
 ---
 
