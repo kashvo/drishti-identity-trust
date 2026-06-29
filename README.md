@@ -35,6 +35,22 @@ Bank of Baroda serves an extraordinarily diverse customer base: a farmer in rura
 
 ---
 
+## Real-World Context — Why This Matters for Bank of Baroda
+
+Drishti is not built for a hypothetical problem. Bank of Baroda has faced real, documented fraud incidents that Drishti is specifically designed to prevent.
+
+| Incident | What Happened | How Drishti Prevents It |
+|---|---|---|
+| bob World App Crisis | Frontline staff linked unauthorized mobile numbers to customer accounts, enabling suspicious transactions | Agent flags account detail changes as high-risk events and triggers hard verification before any change is saved |
+| Digital Arrest Scams | Fraudsters impersonated authorities and coerced customers into transferring funds | Unusual navigation patterns and large transfers to unknown beneficiaries trigger agent intervention mid-session |
+| RBI Currency Chest Fraud | A BoB employee stole ₹8.7 crore over time from an RBI currency chest | Privileged access monitoring detects employees accessing accounts outside their normal role and transaction patterns |
+| Gold Loan Employee Fraud | A branch employee stole pledged gold ornaments to fund online gambling | Insider behaviour monitoring flags access to assets outside an employee's usual scope and escalates for review |
+| Corporate Bill Discounting Fraud | Falsified documents used to divert large bank funds through forex and bill discounting schemes | Agent cross-validates transaction signals against user history and flags document-based high-value anomalies |
+
+> These are not hypothetical threats. They are failures that a continuous, agentic identity trust system could have detected — and stopped.
+
+---
+
 ## The Solution
 
 **Drishti** is an Agentic AI-powered Identity Trust Framework that continuously monitors user sessions across all digital banking channels — not just at login, but across every action, every screen, every transaction.
