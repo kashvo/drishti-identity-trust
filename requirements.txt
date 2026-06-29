@@ -1,0 +1,11 @@
+streamlit
+fastapi
+uvicorn
+faker
+locust
+librosa
+mediapipe
+opencv-python
+requests
+python-dotenv
+anthropicn
