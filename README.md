@@ -16,7 +16,7 @@
 *PSB Hackathon Series 2026 · Bank of Baroda × IIT Gandhinagar*
 *Domain: Cybersecurity & Fraud — Identity Trust, Protection & Safety*
 
-[Problem](#the-problem) · [Real-World Context](#real-world-context) · [Solution](#the-solution) · [Architecture](#architecture) · [How It Works](#how-it-works) · [Features](#key-features) · [Tech Stack](#technology-stack) · [Research](#research-foundation) · [Team](#team-drishti)
+[Problem](#the-problem) · [Real-World Context](#real-world-context) · [Solution](#the-solution) · [Architecture](#architecture) · [How It Works](#how-it-works) · [Features](#key-features) · [Security](#security-architecture) · [Tech Stack](#technology-stack) · [Research](#research-foundation) · [Team](#team-drishti)
 
 </div>
 
@@ -254,6 +254,63 @@ Every session updates the user's memory profile. The Identity Trust Score evolve
 
 ---
 
+## Security Architecture
+
+Drishti is not just an AI solution. It is a cybersecurity solution powered by AI — built on Zero Trust principles, designed against STRIDE threats, and aligned with OWASP standards.
+
+### Zero Trust Foundation
+
+> *Never trust anyone automatically. Verify everyone, every time, continuously.*
+
+Traditional banking security works like a castle — once you're inside, you're trusted. Drishti implements Zero Trust — nobody is ever permanently trusted, not customers, not employees, not systems.
+
+| Zero Trust Principle | How Drishti Implements It |
+|---|---|
+| Verify Explicitly | Every action re-evaluated against all available signals — never assumed safe |
+| Least Privilege Access | Verification tier scales with risk — OTP for medium, Video KYC for high, Block for critical |
+| Assume Breach | Continuous monitoring operates as if attackers are already inside — because sometimes they are |
+
+---
+
+### STRIDE Threat Model
+
+| Threat | Attack | Drishti's Defence |
+|---|---|---|
+| **S — Spoofing** | Fake identity, stolen credentials, cloned voice, deepfake face | Multi-signal cross-validation — behavioural biometrics, device trust, deepfake-aware verification |
+| **T — Tampering** | Modifying transaction amounts, altering user records, manipulating logs | AES-256 encrypted profiles, SHA-256 integrity hashing, immutable audit logs, agent detects anomalous profile changes |
+| **R — Repudiation** | "I never did that" — insider denies performing fraudulent action | Complete immutable audit trail — every decision logged with reasoning chain, timestamp, device, and location |
+| **I — Information Disclosure** | Leaking user personal data, exposing transaction history | Stores patterns not personal data, hashed identifiers, data minimisation by design, DPDP Act compliant |
+| **D — Denial of Service** | Overwhelming the system with fake requests | Rate limiting on all endpoints, unusual request velocity is itself a risk signal the agent detects |
+| **E — Elevation of Privilege** | Employee accessing accounts beyond their role, insider fraud | Privileged access monitoring — same framework applied to internal users as customers, flags access outside normal role patterns |
+
+> The BoB ₹8.70 crore e-Kuber theft was a Tampering + Elevation of Privilege attack that went undetected for four months. Drishti's immutable audit trail and privileged access monitoring would have flagged it on day one.
+
+---
+
+### Data Security
+
+| Layer | Implementation | Purpose |
+|---|---|---|
+| Encryption at Rest | AES-256 for all user memory profiles | Profiles unreadable even if storage is breached |
+| Integrity Verification | SHA-256 hash stored separately per profile | Any tampering detected instantly before agent reads data |
+| Identifier Hashing | Raw IPs and device IDs never stored | Privacy preserved — only hashed values used for matching |
+| Immutable Audit Logs | Append-only logs — cannot be deleted or modified | Full evidence trail for RBI compliance and dispute resolution |
+| Data Minimisation | Agent sees only risk-relevant features | Personal details never exposed to reasoning layer |
+
+---
+
+### OWASP Alignment
+
+| OWASP Risk | How Drishti Addresses It |
+|---|---|
+| Broken Authentication | Continuous re-authentication — session trust degrades, never permanently granted |
+| Identification Failures | Multi-signal identity verification — no single signal ever trusted alone |
+| Security Logging Failures | Complete immutable audit trail — nothing happens without a trace |
+| Insecure Design | Zero Trust and privacy-first built into architecture from day one — not bolted on |
+| Data Integrity Failures | SHA-256 integrity hashing detects any unauthorised profile modification |
+
+---
+
 ## Technology Stack
 
 | Layer | Technology | Purpose |
@@ -267,6 +324,8 @@ Every session updates the user's memory profile. The Identity Trust Score evolve
 | Device Trust | Device Fingerprinting | Known vs unknown device detection |
 | Voice Deepfake Detection | Spectrogram Signal Analysis — librosa | One layer of synthetic voice detection |
 | Video Deepfake Detection | Real-time Liveness — MediaPipe | Challenge-response verification |
+| Encryption | cryptography library — AES-256 | User memory profiles encrypted at rest |
+| Integrity Verification | hashlib — SHA-256 | Tamper detection for all user profiles |
 | Privacy Layer | Hashed identifiers, data minimisation | DPDP Act compliance |
 
 ---
